@@ -1,0 +1,43 @@
+#!/bin/bash
+# RoadChain Pre-Commit Hook
+# Copyright © 2026 BlackRoad OS, Inc. All Rights Reserved.
+#
+# This hook automatically tracks commits using SHA-256 hashing
+
+set -e
+
+# RoadChain configuration
+ROADCHAIN_DIR=".roadchain"
+COMMITS_LOG="${ROADCHAIN_DIR}/commits.log"
+
+# Ensure RoadChain directory exists
+if [ ! -d "$ROADCHAIN_DIR" ]; then
+    mkdir -p "$ROADCHAIN_DIR"
+fi
+
+# Get commit information
+TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+AUTHOR=$(git config user.name)
+EMAIL=$(git config user.email)
+
+# Get staged files and calculate SHA-256
+STAGED_FILES=$(git diff --cached --name-only)
+if [ -n "$STAGED_FILES" ]; then
+    # Calculate SHA-256 of all staged changes
+    CONTENT_HASH=$(git diff --cached | sha256sum | awk '{print $1}')
+    
+    # Get short description of changes
+    NUM_FILES=$(echo "$STAGED_FILES" | wc -l)
+    
+    # Log to RoadChain
+    echo "${TIMESTAMP} | PENDING | ${AUTHOR} <${EMAIL}> | ${NUM_FILES} files staged | SHA256:${CONTENT_HASH}" >> "$COMMITS_LOG"
+    
+    # Stage the commits.log file to include it in the commit
+    git add "$COMMITS_LOG"
+    
+    echo "✓ RoadChain: Commit tracked with SHA-256: ${CONTENT_HASH:0:16}..."
+else
+    echo "⚠ RoadChain: No staged files to track"
+fi
+
+exit 0

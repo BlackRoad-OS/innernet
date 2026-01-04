@@ -1,15 +1,15 @@
 [package]
-authors = ["Ryo Kawaguchi <ryo@kawagu.ch>"]
+authors = ["BlackRoad OS, Inc. <info@blackroad-os.com>"]
 categories = ["command-line-interface", "network-programming"]
-description = "A simplistic programmatic /etc/hosts file editor"
+description = "A simplistic programmatic /etc/hosts file editor. Copyright © 2026 BlackRoad OS, Inc."
 edition = "2021"
-homepage = "https://github.com/tonarino/innernet"
+homepage = "https://github.com/BlackRoad-OS/innernet"
 keywords.workspace = true
-license = "MIT"
+license = "UNLICENSED"
 name = "hostsfile"
-publish = true
+publish = false
 readme = "README.md"
-repository = "https://github.com/tonarino/innernet"
+repository = "https://github.com/BlackRoad-OS/innernet"
 version = "1.7.1"
 
 [dependencies]

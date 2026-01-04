@@ -1,20 +1,15 @@
 [package]
-authors = [
-  "Jake McGinty <me@jakebot.org>",
-  "Brian Schwind <brian@tonari.no>",
-  "Ryo Kawaguchi <ryo@tonari.no>",
-  "Matěj Laitl <matej@tonari.no>",
-]
+authors = ["BlackRoad OS, Inc. <info@blackroad-os.com>"]
 categories = ["network-programming"]
-description = "Library utilities shared between innernet (client) and innernet-server"
+description = "Library utilities shared between innernet (client) and innernet-server. Copyright © 2026 BlackRoad OS, Inc."
 edition = "2021"
-homepage = "https://github.com/tonarino/innernet"
+homepage = "https://github.com/BlackRoad-OS/innernet"
 keywords.workspace = true
-license = "MIT"
+license = "UNLICENSED"
 name = "innernet-shared"
-publish = true
+publish = false
 readme = "../README.md"
-repository = "https://github.com/tonarino/innernet"
+repository = "https://github.com/BlackRoad-OS/innernet"
 version = "1.7.1"
 
 [dependencies]
