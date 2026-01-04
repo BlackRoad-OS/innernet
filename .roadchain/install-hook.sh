@@ -4,6 +4,10 @@
 
 set -e
 
+# Get the absolute path to the repository root
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+cd "$REPO_ROOT"
+
 echo "Installing RoadChain git hook..."
 
 # Check if we're in a git repository
@@ -22,9 +26,11 @@ if [ -f ".git/hooks/pre-commit" ]; then
     mv .git/hooks/pre-commit .git/hooks/pre-commit.backup
 fi
 
-# Create symlink to RoadChain pre-commit hook
-ln -s ../../.roadchain/pre-commit .git/hooks/pre-commit
-chmod +x .git/hooks/pre-commit
+# Create symlink to RoadChain pre-commit hook using absolute path
+HOOK_SOURCE="${REPO_ROOT}/.roadchain/pre-commit"
+HOOK_TARGET="${REPO_ROOT}/.git/hooks/pre-commit"
+ln -sf "$HOOK_SOURCE" "$HOOK_TARGET"
+chmod +x "$HOOK_SOURCE"
 
 echo "✓ RoadChain hook installed successfully"
 echo ""

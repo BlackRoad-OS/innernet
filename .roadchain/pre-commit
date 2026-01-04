@@ -23,14 +23,21 @@ EMAIL=$(git config user.email)
 # Get staged files and calculate SHA-256
 STAGED_FILES=$(git diff --cached --name-only)
 if [ -n "$STAGED_FILES" ]; then
-    # Calculate SHA-256 of all staged changes
-    CONTENT_HASH=$(git diff --cached | sha256sum | awk '{print $1}')
+    # Calculate SHA-256 of all staged changes (cross-platform)
+    if command -v sha256sum >/dev/null 2>&1; then
+        CONTENT_HASH=$(git diff --cached | sha256sum | awk '{print $1}')
+    elif command -v shasum >/dev/null 2>&1; then
+        CONTENT_HASH=$(git diff --cached | shasum -a 256 | awk '{print $1}')
+    else
+        # Fallback to git's built-in hashing
+        CONTENT_HASH=$(git diff --cached | git hash-object --stdin)
+    fi
     
     # Get short description of changes
     NUM_FILES=$(echo "$STAGED_FILES" | wc -l)
     
     # Log to RoadChain
-    echo "${TIMESTAMP} | PENDING | ${AUTHOR} <${EMAIL}> | ${NUM_FILES} files staged | SHA256:${CONTENT_HASH}" >> "$COMMITS_LOG"
+    echo "${TIMESTAMP} | ${AUTHOR} <${EMAIL}> | ${NUM_FILES} files | SHA256:${CONTENT_HASH}" >> "$COMMITS_LOG"
     
     # Stage the commits.log file to include it in the commit
     git add "$COMMITS_LOG"

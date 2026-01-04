@@ -30,10 +30,10 @@ echo ""
 if [ $COMMIT_COUNT -gt 0 ]; then
     echo "📋 Recent RoadChain entries:"
     echo ""
-    grep "SHA256:" "$COMMITS_LOG" | tail -5 | while IFS='|' read -r timestamp status author message hash; do
+    grep "SHA256:" "$COMMITS_LOG" | tail -5 | while IFS='|' read -r timestamp author files hash; do
         echo "   ⏰ $timestamp"
         echo "   👤 $author"
-        echo "   📝 $message"
+        echo "   📝 $files"
         echo "   🔐 $hash"
         echo ""
     done
