@@ -1,20 +1,15 @@
 [package]
-authors = [
-  "Jake McGinty <me@jakebot.org>",
-  "Brian Schwind <brian@tonari.no>",
-  "Ryo Kawaguchi <ryo@tonari.no>",
-  "Matěj Laitl <matej@tonari.no>",
-]
+authors = ["BlackRoad OS, Inc. <info@blackroad-os.com>"]
 categories = ["command-line-utilities", "network-programming"]
-description = "A server to coordinate innernet networks."
+description = "A server to coordinate innernet networks. Copyright © 2026 BlackRoad OS, Inc."
 edition = "2021"
-homepage = "https://github.com/tonarino/innernet"
+homepage = "https://github.com/BlackRoad-OS/innernet"
 keywords.workspace = true
-license = "MIT"
+license = "UNLICENSED"
 name = "innernet-server"
-publish = true
+publish = false
 readme = "../README.md"
-repository = "https://github.com/tonarino/innernet"
+repository = "https://github.com/BlackRoad-OS/innernet"
 version = "1.7.1"
 
 [lib]
@@ -106,7 +101,7 @@ assets = [
   ],
 ]
 depends = "libc6, libgcc1, libsqlite3-0, zlib1g, systemd"
-maintainer = "tonari <hey@tonari.no>"
+maintainer = "BlackRoad OS, Inc. <info@blackroad-os.com>"
 name = "innernet-server"
 priority = "optional"
 recommends = "wireguard"

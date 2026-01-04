@@ -1,20 +1,15 @@
 [package]
-authors = [
-  "Jake McGinty <me@jakebot.org>",
-  "Brian Schwind <brian@tonari.no>",
-  "Ryo Kawaguchi <ryo@tonari.no>",
-  "Matěj Laitl <matej@tonari.no>",
-]
+authors = ["BlackRoad OS, Inc. <info@blackroad-os.com>"]
 categories = ["command-line-utilities", "network-programming"]
-description = "A client to manage innernet network interfaces."
+description = "A client to manage innernet network interfaces. Copyright © 2026 BlackRoad OS, Inc."
 edition = "2021"
-homepage = "https://github.com/tonarino/innernet"
+homepage = "https://github.com/BlackRoad-OS/innernet"
 keywords.workspace = true
-license = "MIT"
+license = "UNLICENSED"
 name = "innernet"
-publish = true
+publish = false
 readme = "../README.md"
-repository = "https://github.com/tonarino/innernet"
+repository = "https://github.com/BlackRoad-OS/innernet"
 version = "1.7.1"
 
 [[bin]]
@@ -56,7 +51,7 @@ assets = [
 depends = "libc6, libgcc1, systemd"
 recommends = "wireguard"
 extended-description = "innernet client binary for fetching peer information and conducting admin tasks such as adding a new peer."
-maintainer = "tonari <hey@tonari.no>"
+maintainer = "BlackRoad OS, Inc. <info@blackroad-os.com>"
 name = "innernet"
 priority = "optional"
 section = "net"

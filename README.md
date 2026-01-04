@@ -1,9 +1,12 @@
 # innernet
 
 [![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
-[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tonarino/innernet/blob/master/LICENSE)
+[![BlackRoad OS](https://img.shields.io/badge/license-BlackRoad%20OS%20Proprietary-red.svg)](https://github.com/BlackRoad-OS/innernet/blob/master/LICENSE)
+[![RoadChain](https://img.shields.io/badge/tracking-RoadChain%20SHA--256-blue.svg)](https://github.com/BlackRoad-OS/innernet)
 
-A private network system that uses [WireGuard](https://wireguard.com) under the hood. See the [announcement blog post](https://blog.tonari.no/introducing-innernet) for a longer-winded explanation.
+**Copyright © 2026 BlackRoad OS, Inc. All Rights Reserved.**
+
+A private network system that uses [WireGuard](https://wireguard.com) under the hood. This software is proprietary and maintained by BlackRoad OS, Inc.
 
 <img src="https://user-images.githubusercontent.com/373823/118917068-09ae7700-b96b-11eb-80f4-6860072d504d.gif" width="600" height="370">
 
@@ -286,3 +289,24 @@ Please run the release script from a Linux machine: generated shell completions 
 1. Tag the commit using `git tag -f -a v<version> -m "release v<version>`.
 1. Push the created tag to the repo using `git push origin v<version>`.
 1. Create a GitHub release from the tag, generate release notes and highlight important changes.
+
+## RoadChain Commit Tracking
+
+This repository uses **RoadChain**, a SHA-256 based commit tracking system maintained by BlackRoad OS, Inc. 
+
+RoadChain automatically tracks all commits with cryptographic hashing to ensure code integrity and provenance. Each commit is logged with its SHA-256 hash in the `.roadchain/commits.log` file.
+
+### How RoadChain Works
+
+- Every commit triggers the RoadChain pre-commit hook
+- The commit's SHA-256 hash is calculated and logged
+- A cryptographic chain of custody is maintained
+- All changes are traceable and verifiable
+
+For more information about RoadChain, contact BlackRoad OS, Inc. at info@blackroad-os.com
+
+## License
+
+This software is proprietary and confidential. Copyright © 2026 BlackRoad OS, Inc. All Rights Reserved.
+
+See the [LICENSE](LICENSE) file for full terms and conditions.
