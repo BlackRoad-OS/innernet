@@ -1,3 +1,28 @@
+<div align="center">
+
+# 🛣️ BlackRoad OS Integration
+
+<p align="center">
+  <a href="https://blackroad.io"><img src="https://img.shields.io/badge/BlackRoad-OS-000000?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI0Y1QTYyMyIgZD0iTTEyIDJMMyAyMGgxOEwxMiAyeiIvPjwvc3ZnPg==" alt="BlackRoad OS"></a>
+  <a href="https://github.com/BlackRoad-OS"><img src="https://img.shields.io/badge/Org-BlackRoad--OS-F5A623?style=for-the-badge" alt="BlackRoad-OS"></a>
+  <a href="https://blackroad.io"><img src="https://img.shields.io/badge/Website-blackroad.io-FF1D6C?style=for-the-badge" alt="Website"></a>
+</p>
+
+<p align="center">
+  <strong>Part of the BlackRoad OS Infrastructure</strong><br>
+  <em>Building the future of decentralized systems</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/license/BlackRoad-OS/innernet?style=flat-square&color=9C27B0" alt="License">
+  <img src="https://img.shields.io/github/stars/BlackRoad-OS/innernet?style=flat-square&color=F5A623" alt="Stars">
+  <img src="https://img.shields.io/github/forks/BlackRoad-OS/innernet?style=flat-square&color=2979FF" alt="Forks">
+</p>
+
+---
+
+</div>
+
 # innernet
 
 [![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
@@ -305,3 +330,21 @@ This software is NOT for commercial resale. Testing purposes only.
 **Contact:** blackroad.systems@gmail.com
 
 See [LICENSE](LICENSE) for complete terms.
+
+---
+
+<div align="center">
+
+## 🖤 BlackRoad OS Integration
+
+This project is part of the **BlackRoad OS** ecosystem - a comprehensive platform for decentralized infrastructure, AI systems, and next-generation computing.
+
+<p>
+  <a href="https://blackroad.io">🌐 blackroad.io</a> •
+  <a href="https://github.com/BlackRoad-OS">📦 GitHub</a> •
+  <a href="mailto:blackroad.systems@gmail.com">📧 Contact</a>
+</p>
+
+**© 2026 BlackRoad OS, Inc. All rights reserved.**
+
+</div>
